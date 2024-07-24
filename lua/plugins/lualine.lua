@@ -3,7 +3,7 @@ return {
   event = "BufReadPre",
   opts = {
     options = {
-      theme = "gruvbox_dark",
+      -- theme = "eldritch",
     },
   },
 }

@@ -11,4 +11,6 @@ vim.opt_local.conceallevel = 2
 vim.opt_global.conceallevel = 2
 vim.wo.colorcolumn = ""
 
-vim.o.background = "dark"
+vim.g.background = "light"
+
+vim.opt.termguicolors = true
