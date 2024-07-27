@@ -14,6 +14,7 @@ return {
   "tckmn/hotdog.vim",
   "dundargoc/fakedonalds.nvim",
   "craftzdog/solarized-osaka.nvim",
+  "horanmustaplot/xcarbon.nvim",
   { "rose-pine/neovim", name = "rose-pine" },
   "eldritch-theme/eldritch.nvim",
   "jesseleite/nvim-noirbuddy",

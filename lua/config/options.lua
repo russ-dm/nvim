@@ -11,6 +11,14 @@ vim.opt_local.conceallevel = 2
 vim.opt_global.conceallevel = 2
 vim.wo.colorcolumn = ""
 
-vim.g.background = "light"
+vim.g.background = "Dark"
 
 vim.opt.termguicolors = true
+
+if vim.g.neovide then
+  vim.o.guifont = "VictorMono Nerd Font Mono:h14"
+  vim.g.neovide_refresh_rate = 60
+  vim.g.neovide_refresh_rate_idle = 5
+  vim.g.neovide_hide_mouse_when_typing = true
+  vim.g.neovide_cursor_vfx_mode = "sonicboom"
+end
