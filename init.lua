@@ -1,6 +1,20 @@
 require("config.lazy")
-local theme = require("last-color").recall()
-vim.cmd(("colorscheme %s"):format(theme))
+
+-- default colorscheme or fallback
+vim.g.SCHEME = "patana"
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  nested = true,
+  callback = function()
+    pcall(vim.cmd.colorscheme, vim.g.SCHEME)
+  end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = function(params)
+    vim.g.SCHEME = params.match
+  end,
+})
 
 -- local lush = require "lush"
 -- local base = require "zenbones"
