@@ -11,6 +11,7 @@ return {
     end,
   },
   "rktjmp/lush.nvim",
+  "cvigilv/patana.nvim",
   "tckmn/hotdog.vim",
   "dundargoc/fakedonalds.nvim",
   "craftzdog/solarized-osaka.nvim",
@@ -25,7 +26,7 @@ return {
   "rockyzhang24/arctic.nvim",
   "folke/tokyonight.nvim",
   "Shatur/neovim-ayu",
-  "RRethy/base16-nvim",
+  --  "RRethy/base16-nvim",
   "xero/miasma.nvim",
   "cocopon/iceberg.vim",
   "kepano/flexoki-neovim",
@@ -35,11 +36,5 @@ return {
   "LuRsT/austere.vim",
   "ricardoraposo/gruvbox-minor.nvim",
   "NTBBloodbath/sweetie.nvim",
-  {
-    "maxmx03/fluoromachine.nvim",
-    -- config = function()
-    --   local fm = require "fluoromachine"
-    --   fm.setup { glow = true, theme = "fluoromachine" }
-    -- end,
-  },
+  "maxmx03/fluoromachine.nvim",
 }

@@ -1,7 +1,7 @@
 require("config.lazy")
 
 -- default colorscheme or fallback
-vim.g.SCHEME = "patana"
+vim.g.SCHEME = "vim"
 
 vim.api.nvim_create_autocmd("VimEnter", {
   nested = true,

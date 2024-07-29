@@ -15,7 +15,6 @@ vim.wo.colorcolumn = ""
 vim.g.background = "Dark"
 
 vim.opt.termguicolors = true
-
 if vim.g.neovide then
   vim.o.guifont = "VictorMono Nerd Font Mono:h14"
   vim.g.neovide_refresh_rate = 60
