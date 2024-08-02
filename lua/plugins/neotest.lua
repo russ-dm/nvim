@@ -7,8 +7,11 @@ return {
     },
     opts = {
       adapters = {
-        ["neotest-rust"] = {
-          arg = { "--no-capture" },
+        {
+          ["neotest-rust"] = {
+            arg = { "--no-capture" },
+          },
+          { ["rustaceanvim.neotest"] = {} },
         },
       },
     },

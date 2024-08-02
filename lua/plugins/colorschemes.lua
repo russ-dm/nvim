@@ -1,21 +1,15 @@
 -- ... this file is filled with pain
 
 return {
-  {
-    lazy = false,
-    priority = 1000,
-    --dir = "~/plugins/colorbuddy.nvim",
-    "tjdevries/colorbuddy.nvim",
-    config = function()
-      vim.cmd.colorscheme("gruvbuddy")
-    end,
-  },
+  "mhartington/oceanic-next",
+  "tjdevries/colorbuddy.nvim",
+  "aliqyan-21/darkvoid.nvim",
   "rktjmp/lush.nvim",
   "cvigilv/patana.nvim",
   "tckmn/hotdog.vim",
   "dundargoc/fakedonalds.nvim",
   "craftzdog/solarized-osaka.nvim",
-  "horanmustaplot/xcarbon.nvim",
+  { "russ-dm/xcarbon.nvim", dir = "~/dev/repos/xcarbon.nvim" },
   { "rose-pine/neovim", name = "rose-pine" },
   "eldritch-theme/eldritch.nvim",
   "jesseleite/nvim-noirbuddy",

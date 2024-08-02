@@ -17,6 +17,7 @@ return {
       "hrsh7th/cmp-emoji",
       "hrsh7th/cmp-path",
       "brenoprata10/nvim-highlight-colors",
+      "onsails/lspkind.nvim",
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
@@ -34,7 +35,48 @@ return {
       local cmp = require("cmp")
 
       opts.formatting = {
-        format = require("nvim-highlight-colors").format,
+        -- format = require("nvim-highlight-colors").format,
+        expandable_indicator = true,
+        fields = { "kind", "abbr", "menu" },
+        format = function(entry, item)
+          local kind = require("lspkind").cmp_format({
+            mode = "symbol_text",
+            maxwidth = 50,
+            symbol_map = {
+              Text = "󰉿",
+              Method = "󰆧",
+              Function = "󰊕",
+              Constructor = "",
+              Field = "󰜢",
+              Variable = "󰀫",
+              Class = "󰠱",
+              Interface = "",
+              Module = "",
+              Property = "󰜢",
+              Unit = "󰑭",
+              Value = "󰎠",
+              Enum = "",
+              Keyword = "󰌋",
+              Snippet = "",
+              Color = "󰏘",
+              File = "󰈙",
+              Reference = "󰈇",
+              Folder = "󰉋",
+              EnumMember = "",
+              Constant = "󰏿",
+              Struct = "󰙅",
+              Event = "",
+              Operator = "󰆕",
+              TypeParameter = "",
+              Codeium = "",
+            }, --
+          })(entry, item)
+
+          local strings = vim.split(kind.kind, "%s", { trimempty = true })
+          kind.kind = " " .. (strings[1] or "") .. " "
+
+          return kind
+        end,
       }
       table.insert(opts.sources, { name = "emoji" })
       opts.window = {
