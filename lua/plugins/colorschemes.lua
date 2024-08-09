@@ -3,7 +3,7 @@
 return {
   "mhartington/oceanic-next",
   "tjdevries/colorbuddy.nvim",
-  "aliqyan-21/darkvoid.nvim",
+  --  "aliqyan-21/darkvoid.nvim",
   "rktjmp/lush.nvim",
   "cvigilv/patana.nvim",
   "tckmn/hotdog.vim",
